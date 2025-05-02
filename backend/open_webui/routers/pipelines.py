@@ -72,6 +72,7 @@ async def process_pipeline_inlet_filter(request, payload, user, models):
             if urlIdx is None:
                 continue
 
+            urlIdx = int(urlIdx)
             url = request.app.state.config.OPENAI_API_BASE_URLS[urlIdx]
             key = request.app.state.config.OPENAI_API_KEYS[urlIdx]
 
